@@ -57,7 +57,7 @@ export default function AboutPage() {
           <div className="space-y-10 lg:col-span-6 lg:col-start-7">
             <div>
               <h2 className="display-soft text-4xl uppercase text-navy sm:text-5xl">The ministry</h2>
-              <p className="mt-5 text-lg leading-relaxed text-ink-soft">
+              <p className="mt-5 font-serif text-[1.3rem] leading-[1.55] text-ink-soft">
                 The Lord&rsquo;s Chosen Charismatic Revival Ministries began in Lagos in 2002 under
                 Pastor Lazarus Muoka, and has its headquarters at Ijesha, Lagos. It is a revival
                 ministry: it calls people to repent, to live holy lives and to prepare for heaven,
@@ -66,7 +66,7 @@ export default function AboutPage() {
             </div>
             <div>
               <h2 className="display-soft text-4xl uppercase text-navy sm:text-5xl">The campus fellowship</h2>
-              <p className="mt-5 text-lg leading-relaxed text-ink-soft">
+              <p className="mt-5 font-serif text-[1.3rem] leading-[1.55] text-ink-soft">
                 On the OAU campus in Ile-Ife, the fellowship brings that same message to students.
                 We meet on Sundays for worship, through the week for Bible study and prayer, and
                 in the halls for evangelism. Staff advisers guide the work and a student executive
@@ -105,7 +105,7 @@ export default function AboutPage() {
               {badgeParts.map((p) => (
                 <div key={p.term} className="border-t border-white/20 pt-5">
                   <dt className="text-xl font-semibold">{p.term}</dt>
-                  <dd className="mt-2 leading-relaxed text-white/75">{p.detail}</dd>
+                  <dd className="mt-2 font-serif text-[1.15rem] leading-[1.5] text-white/75">{p.detail}</dd>
                 </div>
               ))}
             </dl>
@@ -122,7 +122,7 @@ export default function AboutPage() {
               <h3 className="display text-4xl uppercase">
                 <span className="split-ink">{b.title}</span>
               </h3>
-              <p className="mt-4 text-lg leading-relaxed text-ink-soft">{b.body}</p>
+              <p className="mt-4 font-serif text-[1.3rem] leading-[1.55] text-ink-soft">{b.body}</p>
             </li>
           ))}
         </ul>
