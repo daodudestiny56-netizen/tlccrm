@@ -66,13 +66,6 @@ body {
   line-height: 0.95;
 }
 
-/* Long-form reading text in the church site's serif */
-.prose-serif {
-  font-family: var(--font-serif);
-  font-size: 1.3rem;
-  line-height: 1.6;
-}
-
 /* The signature: red over green, split like the TLC wordmark */
 .split-ink {
   background-image: linear-gradient(
