@@ -27,7 +27,7 @@ export default function Home() {
                 </span>
               </span>
             </h1>
-            <p className="fade-late mt-8 max-w-lg text-xl leading-relaxed">
+            <p className="fade-late mt-8 max-w-lg font-serif text-[1.5rem] leading-[1.5]">
               Worship, the Word and prayer for students who want to live for Christ on campus and
               make heaven at the end of it all.
             </p>
@@ -83,7 +83,7 @@ export default function Home() {
         <div className="grid gap-10 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <h2 className="display-soft text-5xl uppercase text-navy sm:text-6xl">Your week with us</h2>
-            <p className="mt-5 max-w-sm text-lg leading-relaxed text-ink-soft">
+            <p className="mt-5 max-w-sm font-serif text-[1.3rem] leading-[1.55] text-ink-soft">
               Five fixed points in a busy semester. Come to one, and you will find a family at all
               of them.
             </p>
@@ -121,7 +121,7 @@ export default function Home() {
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-navy-deep via-navy-deep/85 to-navy/40" />
         <div className="mx-auto max-w-7xl px-4 py-28 sm:px-6 lg:px-10 lg:py-40">
           <blockquote>
-            <p className="display-soft max-w-5xl text-[clamp(2.4rem,6vw,5.4rem)]">
+            <p className="max-w-5xl font-serif text-[clamp(2.2rem,5.2vw,4.6rem)] leading-[1.12] italic">
               &ldquo;{fellowship.scripture.text}&rdquo;
             </p>
             <footer className="mt-10">
@@ -144,7 +144,7 @@ export default function Home() {
             {beliefs.map((b) => (
               <div key={b.title} className="border-l-4 border-chosen-red pl-6">
                 <dt className="display text-4xl uppercase">{b.title}</dt>
-                <dd className="mt-3 max-w-xs text-lg leading-relaxed text-ink-soft">{b.body}</dd>
+                <dd className="mt-3 max-w-xs font-serif text-[1.3rem] leading-[1.55] text-ink-soft">{b.body}</dd>
               </div>
             ))}
           </dl>
@@ -158,7 +158,7 @@ export default function Home() {
             <h2 className="display-soft max-w-2xl text-5xl uppercase text-navy sm:text-6xl">
               Guided by staff, led by students
             </h2>
-            <p className="max-w-sm text-lg leading-relaxed text-ink-soft">
+            <p className="max-w-sm font-serif text-[1.3rem] leading-[1.55] text-ink-soft">
               {advisers.length} members of staff advise the fellowship. {executives.length} students
               serve on this year&rsquo;s executive council.
             </p>
@@ -235,7 +235,7 @@ export default function Home() {
             <h2 className="display text-[clamp(3.4rem,8vw,6.5rem)] uppercase text-navy">
               New to Great Ife?
             </h2>
-            <p className="mt-6 max-w-lg text-xl leading-relaxed text-ink-soft">
+            <p className="mt-6 max-w-lg font-serif text-[1.5rem] leading-[1.5] text-ink-soft">
               Whether you just got your admission letter or you are in your final year, there is a
               place for you here. Come on Sunday, then find a unit where your gifts can serve.
             </p>
