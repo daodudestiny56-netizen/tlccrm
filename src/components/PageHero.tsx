@@ -20,7 +20,7 @@ export function PageHero({ title, intro, aside }: PageHeroProps) {
             </span>
           ))}
         </h1>
-        <div className="fade-late max-w-md text-lg leading-relaxed text-ink-soft lg:col-span-5 lg:justify-self-end">
+        <div className="fade-late max-w-md font-serif text-[1.3rem] leading-[1.55] text-ink-soft lg:col-span-5 lg:justify-self-end">
           {intro}
           {aside}
         </div>
