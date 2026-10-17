@@ -37,7 +37,7 @@ export function Badge({ id, className, spinning = true }: BadgeProps) {
           fontSize="17"
           fontWeight="800"
           letterSpacing="3.2"
-          style={{ fontVariationSettings: '"wdth" 75, "opsz" 24' }}
+          style={{ fontFamily: "var(--font-display)", fontVariationSettings: '"wdth" 75, "opsz" 24' }}
         >
           <textPath href={`#${ring}`} startOffset="0">
             JESUS IS LORD ✚ HEAVEN AT LAST ✚ MATTHEW 6:33 ✚
@@ -67,7 +67,7 @@ export function Badge({ id, className, spinning = true }: BadgeProps) {
         fill="#ffffff"
         fontSize="25"
         fontWeight="800"
-        style={{ fontVariationSettings: '"wdth" 75, "opsz" 48' }}
+        style={{ fontFamily: "var(--font-display)", fontVariationSettings: '"wdth" 75, "opsz" 48' }}
       >
         HEAVEN
       </text>
@@ -78,7 +78,7 @@ export function Badge({ id, className, spinning = true }: BadgeProps) {
         fill="#ffffff"
         fontSize="25"
         fontWeight="800"
-        style={{ fontVariationSettings: '"wdth" 75, "opsz" 48' }}
+        style={{ fontFamily: "var(--font-display)", fontVariationSettings: '"wdth" 75, "opsz" 48' }}
       >
         AT LAST
       </text>
