@@ -3,15 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { navLinks } from "@/data/nav";
 import { GlobeMark } from "./Badge";
-
-export const navLinks = [
-  { href: "/about", label: "About" },
-  { href: "/gatherings", label: "Gatherings" },
-  { href: "/advisers", label: "Staff advisers" },
-  { href: "/executives", label: "Executives" },
-  { href: "/contact", label: "Contact" },
-];
 
 export function SiteHeader() {
   const pathname = usePathname();

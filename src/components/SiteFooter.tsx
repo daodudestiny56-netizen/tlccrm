@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { fellowship, gatherings } from "@/data/fellowship";
 import { telHref } from "@/data/people";
+import { navLinks } from "@/data/nav";
 import { GlobeMark } from "./Badge";
-import { navLinks } from "./SiteHeader";
 
 export function SiteFooter() {
   return (
