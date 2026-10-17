@@ -1,26 +1,170 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+  Palette drawn from The Lord's Chosen identity:
+  red + navy from tlccrm.org, green from the split-colour wordmark,
+  sky from the globe badge.
+*/
+@theme {
+  --color-chosen-red: #e73023;
+  --color-chosen-red-deep: #b8170f;
+  --color-chosen-green: #0b7a3b;
+  --color-chosen-green-deep: #075a2a;
+  --color-navy: #013280;
+  --color-navy-deep: #021b4d;
+  --color-ink: #0f1b3d;
+  --color-ink-soft: #46506b;
+  --color-sky: #e9eff9;
+  --color-sky-line: #cdd8ec;
+  --color-paper: #ffffff;
+
+  --font-sans: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+
+  --ease-rise: cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-variation-settings: "opsz" 14, "wdth" 100;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-chosen-red);
+  color: white;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-chosen-red);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Condensed heavy display cut — echoes the logo's narrow wordmark */
+.display {
+  font-weight: 800;
+  font-variation-settings: "opsz" 96, "wdth" 75;
+  letter-spacing: -0.02em;
+  line-height: 0.86;
+}
+
+.display-soft {
+  font-weight: 700;
+  font-variation-settings: "opsz" 72, "wdth" 82;
+  letter-spacing: -0.015em;
+  line-height: 0.95;
+}
+
+/* The signature: red over green, split like the TLC wordmark */
+.split-ink {
+  background-image: linear-gradient(
+    to bottom,
+    var(--color-chosen-red) 0 56%,
+    var(--color-chosen-green) 56% 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.split-ink-light {
+  background-image: linear-gradient(
+    to bottom,
+    #ffffff 0 56%,
+    #9fe0b6 56% 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* Chapel-window frame for photographs and portraits */
+.arch {
+  border-radius: 999px 999px 18px 18px;
+  overflow: hidden;
+}
+
+.arch-sm {
+  border-radius: 999px 999px 10px 10px;
+  overflow: hidden;
+}
+
+/* Hero load sequence — the single orchestrated motion moment */
+@keyframes rise {
+  from {
+    transform: translateY(105%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes unveil {
+  from {
+    clip-path: inset(100% 0 0 0 round 999px 999px 18px 18px);
+  }
+  to {
+    clip-path: inset(0 0 0 0 round 999px 999px 18px 18px);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.line-mask {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.06em;
+}
+
+.line-rise {
+  display: block;
+  animation: rise 1s var(--ease-rise) both;
+}
+
+.unveil {
+  animation: unveil 1.3s var(--ease-rise) 0.25s both;
+}
+
+.fade-late {
+  animation: fade 0.9s ease 0.9s both;
+}
+
+.spin-slow {
+  animation: spin 38s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .line-rise,
+  .unveil,
+  .fade-late,
+  .spin-slow {
+    animation: none;
+  }
 }
