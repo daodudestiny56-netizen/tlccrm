@@ -23,7 +23,7 @@ export function ContactForm() {
         <p className="display text-5xl uppercase">
           <span className="split-ink-light">Message ready, {sentTo}</span>
         </p>
-        <p className="mt-4 max-w-md text-lg leading-relaxed text-white/80">
+        <p className="mt-4 max-w-md font-serif text-[1.3rem] leading-[1.55] text-white/80">
           This demo site doesn&rsquo;t send messages yet. Once the fellowship connects an inbox, a
           member of the welfare unit will reply within two days.
         </p>

@@ -6,7 +6,7 @@ export default function NotFound() {
       <h1 className="display text-[clamp(4.5rem,14vw,11rem)] uppercase">
         <span className="split-ink">Not here</span>
       </h1>
-      <p className="mt-6 max-w-lg text-xl leading-relaxed text-ink-soft">
+      <p className="mt-6 max-w-lg font-serif text-[1.5rem] leading-[1.5] text-ink-soft">
         This page doesn&rsquo;t exist. It may have moved, or the link may be mistyped.
       </p>
       <Link
