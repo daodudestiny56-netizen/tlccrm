@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque } from "next/font/google";
+import { Bricolage_Grotesque, Crimson_Pro, Lato } from "next/font/google";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import "./globals.css";
@@ -8,6 +8,21 @@ const bricolage = Bricolage_Grotesque({
   variable: "--font-bricolage",
   subsets: ["latin"],
   axes: ["opsz", "wdth"],
+  display: "swap",
+});
+
+// Lato and Crimson Pro are the two families tlccrm.org uses
+const lato = Lato({
+  variable: "--font-lato",
+  subsets: ["latin"],
+  weight: ["400", "700", "900"],
+  display: "swap",
+});
+
+const crimson = Crimson_Pro({
+  variable: "--font-crimson",
+  subsets: ["latin"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
@@ -22,7 +37,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={bricolage.variable}>
+    <html lang="en" className={`${bricolage.variable} ${lato.variable} ${crimson.variable}`}>
       <body className="flex min-h-dvh flex-col">
         <a
           href="#main"

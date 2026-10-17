@@ -18,7 +18,10 @@
   --color-sky-line: #cdd8ec;
   --color-paper: #ffffff;
 
-  --font-sans: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  /* Display: Bricolage. UI: Lato. Reading: Crimson Pro (both from tlccrm.org) */
+  --font-display: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-lato), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-crimson), ui-serif, Georgia, serif;
 
   --ease-rise: cubic-bezier(0.2, 0.8, 0.2, 1);
 }
@@ -31,7 +34,6 @@ body {
   background: var(--color-paper);
   color: var(--color-ink);
   font-family: var(--font-sans);
-  font-variation-settings: "opsz" 14, "wdth" 100;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -49,6 +51,7 @@ body {
 
 /* Condensed heavy display cut — echoes the logo's narrow wordmark */
 .display {
+  font-family: var(--font-display);
   font-weight: 800;
   font-variation-settings: "opsz" 96, "wdth" 75;
   letter-spacing: -0.02em;
@@ -56,10 +59,18 @@ body {
 }
 
 .display-soft {
+  font-family: var(--font-display);
   font-weight: 700;
   font-variation-settings: "opsz" 72, "wdth" 82;
   letter-spacing: -0.015em;
   line-height: 0.95;
+}
+
+/* Long-form reading text in the church site's serif */
+.prose-serif {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  line-height: 1.6;
 }
 
 /* The signature: red over green, split like the TLC wordmark */
