@@ -2,7 +2,7 @@
 
 Website for the campus fellowship of The Lord's Chosen Charismatic Revival Ministries at Obafemi Awolowo University, Ile-Ife, Osun State.
 
-Front-end only, built with Next.js 16 (App Router), React 19, Tailwind CSS 4 and Bricolage Grotesque.
+Front-end only, built with Next.js 16 (App Router), React 19, Tailwind CSS 4, Bricolage Grotesque, Lato and Crimson Pro.
 
 ## Pages
 
@@ -37,6 +37,14 @@ Colours are taken from The Lord's Chosen identity (tlccrm.org and the official l
 | `navy` | `#013280` | tlccrm.org secondary |
 | `chosen-green` | `#0B7A3B` | logo wordmark |
 | `sky` | `#E9EFF9` | tlccrm.org tint |
+
+Typography combines Bricolage Grotesque with the two families tlccrm.org uses:
+
+| Font | Role | Where |
+| --- | --- | --- |
+| Bricolage Grotesque | Display | Headlines and page titles (`.display`, `.display-soft`), the badge |
+| Lato | UI | Nav, buttons, names, profile details, tables, forms (default `font-sans`) |
+| Crimson Pro | Reading | Intros, body paragraphs, Matthew 6:33 (`font-serif`) |
 
 Headlines use the logo's red-over-green split (`.split-ink` in `globals.css`), and photographs sit in arch-topped frames (`.arch`).
 
