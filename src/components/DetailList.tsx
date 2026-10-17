@@ -18,7 +18,7 @@ export function DetailList({ rows, compact = false }: { rows: Row[]; compact?: b
                 href={row.href}
                 className="text-navy underline decoration-sky-line decoration-2 underline-offset-4 hover:decoration-chosen-red"
               >
-                {row.value}
+                {row.href.startsWith("mailto:") ? <BreakableEmail email={row.value} /> : row.value}
               </a>
             ) : (
               row.value
@@ -27,6 +27,19 @@ export function DetailList({ rows, compact = false }: { rows: Row[]; compact?: b
         </div>
       ))}
     </dl>
+  );
+}
+
+/** Lets long addresses wrap before the @ rather than mid-word. */
+function BreakableEmail({ email }: { email: string }) {
+  const at = email.indexOf("@");
+  if (at < 0) return email;
+  return (
+    <>
+      {email.slice(0, at)}
+      <wbr />
+      {email.slice(at)}
+    </>
   );
 }
 
