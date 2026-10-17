@@ -44,7 +44,7 @@ export default function GatheringsPage() {
               </p>
               <div className="md:col-span-5">
                 <h3 className="text-2xl font-semibold">{g.name}</h3>
-                <p className={`mt-2 leading-relaxed ${i === 0 ? "text-white/75" : "text-ink-soft"}`}>{g.note}</p>
+                <p className={`mt-2 font-serif text-[1.15rem] leading-[1.5] ${i === 0 ? "text-white/75" : "text-ink-soft"}`}>{g.note}</p>
               </div>
               <dl className="grid grid-cols-2 gap-4 md:col-span-4 md:text-right">
                 <div>
@@ -79,7 +79,7 @@ export default function GatheringsPage() {
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <h2 className="display-soft text-4xl uppercase text-navy sm:text-5xl">Find your unit</h2>
-            <p className="mt-5 text-lg leading-relaxed text-ink-soft">
+            <p className="mt-5 font-serif text-[1.3rem] leading-[1.55] text-ink-soft">
               Every member serves somewhere. Pick a unit that fits your gifts and the coordinator
               will take it from there.
             </p>
